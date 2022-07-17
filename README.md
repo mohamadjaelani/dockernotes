@@ -166,7 +166,7 @@
                     - "/opt/mysql-data:/var/lib/mysql" #lokasi penyimpanan file mysql di hardisk host
             aplikasi:
                 #image: j43lani/simpleapp # compose based on created image
-                build: . # build image based on source code
+                build: . # build image based on source code / dockerfile
                 depends-on: # apps will be ran after databaseserver is running
                     - databaseserver
             environment:
