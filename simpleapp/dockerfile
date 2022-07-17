@@ -1,0 +1,4 @@
+from apache/beam_java17_sdk
+add target/simpleapp-0.0.1-SNAPSHOT.jar /opt/app.jar
+run bash -c 'touch /opt/app.jar'
+entrypoint ["java","-jar","/opt/app.jar"]
