@@ -111,5 +111,7 @@
    - When you build them, using ```docker build -t <hub-user>/<repo-name>[:<tag>]```
    - By re-tagging an existing local image ```docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]```
    - By using ```docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]``` to commit changes
-#### 4. the push local image into repository
-
+   because I already build the image with ```mohamadjaelani/springboot-simpleapp``` tag so I have to re-tagging by
+   ```docker tag mohamadjaelani/springboot-simpleapp j43lani/simpleapp:latest```
+#### 4. then push local image into repository
+    docker push j43lani/simpleapp:latest
