@@ -80,7 +80,9 @@
     Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 #### docker image built successfuly and the tag name is ```mohamadjaelani/springboot-simpleapp ```
 ### Test the image
-    docker run mohamadjaelani/springboot-simpleapp
+  run the image using the command -d -> run as daemon(background) -p<in>:<out> -> mapping internal port 8080 to 8080(acessing port at out)
+
+        docker run -d -p 8080:8080 mohamadjaelani/springboot-simpleapp
 #### console output
               .   ____          _            __ _ _
          /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
