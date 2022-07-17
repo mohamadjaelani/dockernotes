@@ -111,7 +111,45 @@
    - When you build them, using ```docker build -t <hub-user>/<repo-name>[:<tag>]```
    - By re-tagging an existing local image ```docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]```
    - By using ```docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]``` to commit changes
+
    because I already build the image with ```mohamadjaelani/springboot-simpleapp``` tag so I have to re-tagging by
+
    ```docker tag mohamadjaelani/springboot-simpleapp j43lani/simpleapp:latest```
 #### 4. then push local image into repository
     docker push j43lani/simpleapp:latest
+
+  if it success then the output console will be
+
+    The push refers to repository [docker.io/j43lani/simpleapp]
+    9ec347540179: Preparing
+    dd50fd249f59: Preparing
+    5b9b1908ee80: Preparing
+    485f9ef7c123: Preparing
+    c611bbe8edb8: Preparing
+    dc55695bb7d7: Preparing
+    999a92464cc2: Preparing
+    06685ec10a3d: Preparing
+    9ec347540179: Pushed
+    dd50fd249f59: Pushed
+    5b9b1908ee80: Pushed
+    b5d364b54397: Waiting
+    8bf41ce37c63: Waiting
+    cf3f05349668: Waiting
+    ae2d388f7bfb: Waiting
+    06685ec10a3d: Pushed
+    0d020d3314df: Pushed
+    d4e81fe6b97b: Pushed
+    6eaeff4c6bd0: Pushed
+    b5d364b54397: Pushed
+    8bf41ce37c63: Pushed
+    cf3f05349668: Pushed
+    ae2d388f7bfb: Pushed
+    3fb4cdcc0792: Pushed
+    16fe83093aa9: Pushed
+    3bc383470c05: Pushed
+    e93827457889: Pushed
+    08fa02ce37eb: Pushed
+    a037458de4e0: Pushed
+    bafdbe68e4ae: Pushed
+    a13c519c6361: Pushed
+    latest: digest: sha256:b6c365780a4ae025972e9926e984b3a0ecb57df62371599badf4d238a4384204 size: 5153
