@@ -82,5 +82,34 @@
     => => naming to docker.io/mohamadjaelani/springboot-simpleapp                                                     0.0s
 
     Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
-    
-    
+#### docker image built successfuly and the tag name is ```mohamadjaelani/springboot-simpleapp ```
+### Test the image
+    docker run mohamadjaelani/springboot-simpleapp
+#### console output
+              .   ____          _            __ _ _
+         /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+        ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+         \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+          '  |____| .__|_| |_|_| |_\__, | / / / /
+         =========|_|==============|___/=/_/_/_/
+         :: Spring Boot ::                (v2.7.1)
+
+        2022-07-17 06:04:25.289  INFO 1 --- [           main] i.n.a.s.simpleapp.SimpleappApplication   : Starting SimpleappApplication v0.0.1-SNAPSHOT using Java 17.0.2 on a38a1033e719 with PID 1 (/opt/app.jar started by root in /)
+        2022-07-17 06:04:25.299  INFO 1 --- [           main] i.n.a.s.simpleapp.SimpleappApplication   : No active profile set, falling back to 1 default profile: "default"
+        2022-07-17 06:04:28.101  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+        2022-07-17 06:04:28.135  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+        2022-07-17 06:04:28.136  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+        2022-07-17 06:04:28.340  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+        2022-07-17 06:04:28.341  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2882 ms
+        2022-07-17 06:04:29.413  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+        2022-07-17 06:04:29.445  INFO 1 --- [           main] i.n.a.s.simpleapp.SimpleappApplication   : Started SimpleappApplication in 5.535 seconds (JVM running for 6.575)
+### push the image into docker repository
+#### 1. Login into docker hub and create a repository there
+#### 2. Login in docker command
+        docker login
+#### 3. create local tag of the local image with these method
+    - When you build them, using docker ```build -t <hub-user>/<repo-name>[:<tag>]```
+    - By re-tagging an existing local image ```docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]```
+    - By using ```docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]``` to commit changes
+#### 4. the push local image into repository
+
