@@ -108,8 +108,8 @@
 #### 2. Login in docker command
         docker login
 #### 3. create local tag of the local image with one of these method
-   - When you build them, using *docker build -t <hub-user>/<repo-name>[:<tag>]*
-   - By re-tagging an existing local image *docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]*
-   - By using *docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]* to commit changes
+   - When you build them, using ```docker build -t <hub-user>/<repo-name>[:<tag>]```
+   - By re-tagging an existing local image ```docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]```
+   - By using ```docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]``` to commit changes
 #### 4. the push local image into repository
 
