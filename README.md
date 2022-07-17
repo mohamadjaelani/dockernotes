@@ -151,3 +151,25 @@
     bafdbe68e4ae: Pushed
     a13c519c6361: Pushed
     latest: digest: sha256:b6c365780a4ae025972e9926e984b3a0ecb57df62371599badf4d238a4384204 size: 5153
+
+## Creating Docker Compose
+        version: "3.9"
+        services:
+            databaseserver:
+                image: mysql:5.7
+                environment:
+                    MYSQL_DATABASE: dbAing
+                    MYSQL_USER: root
+                    MYSQL_PASSWORD: 1234
+                    MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+                volumes:
+                    - "/opt/mysql-data:/var/lib/mysql" #lokasi penyimpanan file mysql di hardisk host
+            aplikasi:
+                #image: j43lani/simpleapp # compose based on created image
+                build: . # build image based on source code
+                depends-on: # apps will be ran after databaseserver is running
+                    - databaseserver
+            environment:
+                SPRING_DATASOURCE_URL: jdbc:mysql://dabaseserver/dbAing?serverTimeZoneUTC
+            ports:
+                - "80:8080"
