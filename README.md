@@ -1,7 +1,6 @@
 # dockernotes
 
 ### create docker file to create image
-    ```
     // add open jdk 17 into package
     from apache/beam_java17_sdk
     // add java app into package and will be put on direcltory /opt/ with app.jar as name
@@ -10,14 +9,11 @@
     run bash -c 'touch /opt/app.jar'
     // execute the app with this entrypoint/syntax
     entrypoint ["java","-jar","/opt/app.jar"]
-    ```
 ### execute the file
-    ```
     // build -> build docker image
     // -t built it with 'mohamadjaelani/springboot-simpleapp' as tag
     // .(period) indicate that the docker file is exist at current directory (where the docker command is running)
     docker build -t mohamadjaelani/springboot-simpleapp .
-    ```
 ### console output
     [+] Building 215.1s (9/9) FINISHED
     => [internal] load build definition from Dockerfile                                                               0.1s
